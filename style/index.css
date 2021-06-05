@@ -176,3 +176,18 @@ h2 {
 .i6 { background-image: url(https://images.unsplash.com/photo-1612564148954-59545876eaa0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=80); }
 .i7 { background-image: url(https://images.unsplash.com/photo-1622645706124-59e0089d0195?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80); }
 .i8 { background-image: url(https://images.unsplash.com/photo-1622505636268-7c41a4dd50d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=636&q=80); }
+
+.center {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.center a {
+	color: #333;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.center a:hover {
+	text-decoration: underline;
+}
