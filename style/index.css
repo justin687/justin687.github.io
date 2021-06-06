@@ -191,3 +191,17 @@ h2 {
 .center a:hover {
 	text-decoration: underline;
 }
+
+@media(max-width: 800px) {
+	#s12 {margin: 20px;}
+	.title {font-size: 0.8rem;}
+}
+
+@media(max-width: 450px) {
+	/* body{background-color: red;} */
+	header h1 {font-size: 2.8rem;}
+
+	header nav {padding-left: 0;}
+	header a {padding: 4px; width: 70px;}
+	.title {font-size: 0.5rem; margin-top: -10px;}
+}
