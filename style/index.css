@@ -21,14 +21,18 @@ time, mark, audio, video {
 	box-sizing: border-box;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
     color: #333;
 	font-family: 'Abel', sans-serif;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
 
 h3{
-	font-size: 3rem;
+	font-size: 4rem;
 	margin: 20px;
 }
 
@@ -53,7 +57,7 @@ footer button {
 }
 
 header h1 {
-	font-size: 4rem;
+	font-size: 6rem;
 	font-family: 'Kalam', cursive;
 }
 
@@ -131,7 +135,7 @@ section {
 }
 
 h2 {
-	font-size: 1.8rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 }
 
@@ -192,25 +196,65 @@ h2 {
 	text-decoration: underline;
 }
 
-@media(max-width: 800px) {
-	#s12 {margin: 20px;}
-	.title {font-size: 0.8rem;}
+#navMenu {
+	display: none;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+	line-height: 50px;
+	float: right;
 }
 
-@media(max-width: 450px) {
-	/* body{background-color: red;} */
-	header h1 {font-size: 2.8rem;}
+#mobileNav {
+	position: absolute;
+	top: 70px;
+	right: 40px;
+	width: 0;
+	height: 0;
+	transition: 0.3s ease-in;
+	overflow: hidden;
+}
 
-	header nav {padding-left: 0;}
-	header a {padding: 4px; width: 80px;}
-	.title {
-		font-size: 0.5rem;
-		margin-top: 0;
-		color: #333;
-		backdrop-filter: none;
-		background-color: transparent;
+#mobileNav a {
+	border-radius: 0;
+	width: 100%;
+	border-top: 0;
+}
+
+@media(max-width: 1000px) {
+	#s12 {margin: 20px;}
+}
+
+@media(max-width: 800px) {
+	.block {width: 47%;}
+
+	#topSec {
+		flex-wrap: wrap;
 	}
-	.img:hover{
-		background-size: 120%;
+
+	#s11 {
+		width: 100%;
+		padding-top: 60%;
 	}
+
+	#s12 {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media(max-width: 500px) {
+	header {
+		text-align: center;
+		border: 0;
+		padding-bottom: 0;
+	}
+
+	header h1 {font-size: 4rem; display: inline;}
+
+	header nav {display: none;}
+
+	#navMenu {display: inline-block;}
+
+	#leftNav {border-top: 2px solid #333;}
 }
