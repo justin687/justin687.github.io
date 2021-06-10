@@ -1,4 +1,3 @@
-/* Add CSS styling here */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,7 +19,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 	box-sizing: border-box;
 }
-
+/****** CSS Reset ******/
 html {
 	font-size: 62.5%;
 }
@@ -29,6 +28,9 @@ body {
     color: #333;
 	font-family: 'Abel', sans-serif;
 	font-size: 1.6rem;
+	background-color: #363636;
+	/* color: #0c6dbd; */
+	color: white;
 }
 
 h3{
@@ -39,7 +41,8 @@ h3{
 header, footer {
 	width: 100%;
 	padding: 20px;
-	background-color: #EEE;
+	background-color: #0c6dbd;
+	color: white;
 }
 
 header {
@@ -62,28 +65,24 @@ header h1 {
 }
 
 header nav {
-	padding-left: 20px;
-	padding-bottom: 40px;
+	position: absolute;
+	right: 0;
+	/* top: 42px; */
+	top: 0;
 }
 
 .leftNav {
-	border-left: 2px solid #333;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
-}
-
-.rightNav {
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	/* border-top-left-radius: 20px; */
 }
 
 header a, button {
 	background-color: white;
 	padding: 8px;
-	border: 2px solid #333;
+	/* border: 2px solid #333; */
 	font-weight: bold;
 	transition: 0.1s ease-in;
 	cursor: pointer;
+	border: 0;
 }
 
 button {
@@ -98,15 +97,12 @@ header a {
 	display: inline-block;
 	border-left: 0;
 	float: left;
+	font-size: 20px;
+	line-height: 68px;
 }
 
-header a:hover, button:hover{
-	background-color: #333;
-	color: white;
-}
-
-.active {
-	background-color: #333;
+header a:hover, button:hover, .active{
+	background-color: #2f82f0;
 	color: white;
 }
 
@@ -135,8 +131,9 @@ section {
 }
 
 h2 {
-	font-size: 2.5rem;
+	font-size: 3rem;
 	font-weight: bold;
+	color: #0c6dbd;
 }
 
 #bottomSec {
@@ -203,26 +200,25 @@ h2 {
 	width: 50px;
 	line-height: 50px;
 	float: right;
-}
-
-#mobileNav {
+	z-index: 99999;
 	position: absolute;
-	top: 70px;
-	right: 40px;
-	width: 0;
-	height: 0;
-	transition: 0.3s ease-in;
-	overflow: hidden;
+	top: 20px;
+	right: 10px;
 }
 
-#mobileNav a {
-	border-radius: 0;
-	width: 100%;
-	border-top: 0;
+#mobileNav{
+	display: none;
+}
+header h1 {font-size: 40px; display: inline;}
+header {
+	text-align: center;
+	border: 0;
+	padding-bottom: 0;
 }
 
 @media(max-width: 1000px) {
 	#s12 {margin: 20px;}
+	header{text-align: left; padding-left: 8%;}
 }
 
 @media(max-width: 800px) {
@@ -241,20 +237,46 @@ h2 {
 		width: 100%;
 		text-align: center;
 	}
+
 }
-
-@media(max-width: 500px) {
-	header {
-		text-align: center;
-		border: 0;
-		padding-bottom: 0;
-	}
-
-	header h1 {font-size: 4rem; display: inline;}
-
 	header nav {display: none;}
 
 	#navMenu {display: inline-block;}
 
-	#leftNav {border-top: 2px solid #333;}
-}
+	/* .leftNav {border-top: 2px solid #333;} */
+
+	#mobileNav {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 0;
+		height: 100vh;
+		transition: 0.15s ease-in;
+		overflow: hidden;
+		background-color: white;
+		display: flex;
+		/* flex-direction: column; */
+		flex-wrap: wrap;
+		align-content: space-evenly;
+		align-items: center;
+		/* border: 1px solid red; */
+		z-index: 9999;
+	}
+
+	#mobileNav a {
+		border-radius: 0;
+		width: 100%;
+		border: 0;
+		border-top: 0;
+		font-size: 6rem;
+		/* border: 1px solid green; */
+		line-height: 100%;
+		float: none;
+		display: block;
+	}
+
+	.active, header a:hover {
+		background-color: white;
+		text-decoration: underline;
+		color: #333;
+	}
