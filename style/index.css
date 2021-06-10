@@ -47,14 +47,14 @@ header, footer {
 
 header {
 	/* border-bottom: 3px solid black; */
-	box-shadow: 0 0 4px 0 #111;
+	box-shadow: 0 1px 6px 0 #111;
 }
 
 footer {
 	text-align: center;
 	padding-top: 30px;
 	padding-bottom: 50px;
-	box-shadow: 0 1px 2px 0 #111 inset;
+	box-shadow: 0 3px 2px 0 #222 inset;
 }
 
 footer button {
