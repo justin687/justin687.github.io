@@ -101,6 +101,8 @@ header a {
 	line-height: 68px;
 }
 
+a {color: #0c6dbd;}
+
 header a:hover, button:hover, .active{
 	background-color: #2f82f0;
 	color: white;
